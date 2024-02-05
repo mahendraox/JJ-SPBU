@@ -28,12 +28,15 @@ int SPBU_terefisien(){
                 break;
             }
         }
-       
-            
-              
-       
-
+          
+     if (can_complete_cycle && current_stock > max_stock) {
+            max_stock = current_stock;
+            result = i;
+        }
+    }
+     
 //CODE
+     return result;
 }
 
 int main(){
